@@ -14,14 +14,14 @@ public class App extends Window{
 
         while (true){
             if(player.overlaps(obstacle)){
-                
+                obstacle.move(5, 0);
             }
             screen.update();
-            screen.sleep(.03);
+            screen.sleep(1/30.0);
         }
     }
 
     public void mouseMove(Location location){
-        player.moveTo(location);
+        player.center(location);
     }
 }
